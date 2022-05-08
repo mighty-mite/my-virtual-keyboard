@@ -1,0 +1,165 @@
+body {
+    background-image: url('bkg.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.textarea {
+    margin-bottom: 50px;
+    font-size: 20px;
+    resize: none;
+    background-color:black;
+    color: white;
+    width: 550px;
+    height: 250px
+}
+
+.keyboard {
+ 
+    background-color: rgba(26, 24, 24, 1);
+    border: 5px solid rgba(26, 24, 24, 1);
+    border-radius: 5px;
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: repeat(15, 50px);
+    grid-template-rows: repeat(5, 50px);
+    grid-gap: 5px;
+}
+
+
+.key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: rgb(59, 28, 145);
+    background-color: rgb(49, 20, 128);
+    cursor: pointer;
+    border-radius: 3px;
+    color: rgb(13, 223, 223);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+
+    width: 50px;
+    height: 50px;
+    transition: ease-in 200ms;
+
+        &:hover {
+            background-color: rgb(59, 6, 202);
+            color: rgb(13, 223, 223);
+        }
+
+
+        &:active {
+            transform: scale(0.9);
+            background-color: rgb(59, 6, 202);
+            color: rgb(13, 223, 223);
+        }
+}
+
+.key.active {
+    transform: scale(0.9);
+    background-color: rgb(59, 6, 202);
+    color: rgb(13, 223, 223);
+
+}
+
+.double-spaces-long {
+    width: 105px
+}
+
+.func {
+    background-color: rgb(245, 28, 136);
+}
+
+
+.end {
+    grid-column: 14 / span 2
+}
+
+.start {
+    grid-column: 1 / span 2
+}
+
+.key:nth-child(43),
+.key:nth-child(30) {
+    grid-column: 1 / span 2;
+    width: 105px;
+}
+
+.key:nth-child(55),
+.key:nth-child(14),
+.key:nth-child(42) {
+    grid-column: 14 / span 2;
+    width: 105px;
+    
+}
+
+.key:nth-child(59) {
+    width: 380px;
+    grid-column: 4 / span 7
+}
+
+.key:nth-child(29),
+.key:nth-child(15),
+.key:nth-child(43),
+.key:nth-child(30),
+.key:nth-child(55),
+.key:nth-child(14),
+.key:nth-child(56),
+.key:nth-child(57),
+.key:nth-child(58),
+// .key:nth-child(59),
+.key:nth-child(60),
+.key:nth-child(42),
+.key:nth-child(64) {
+    background-color: rgb(29, 11, 78);
+    color: rgb(245, 28, 136);
+    // transition: ease-in 200ms;
+
+    //     &:hover {
+    //         background-color: rgb(13, 223, 223);
+    //     }
+}
+
+.key:nth-child(54),
+.key:nth-child(61),
+.key:nth-child(62),
+.key:nth-child(63) {
+
+    background-color: rgb(245, 28, 136);
+    color: rgb(29, 11, 78);
+    transition: ease-in 200ms;
+
+        &:hover {
+            background-color: rgb(13, 223, 223);
+        }
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.key div {
+    width: 100%;
+    height: 100%;
+}
+
+.caseDown,
+.shift,
+.caps,
+.shiftCaps  {
+    text-align: center;
+    padding-top: 16px;
+}
