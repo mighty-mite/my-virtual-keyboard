@@ -1,5 +1,3 @@
 import Keyboard from './Keyboard.js';
 
-new Keyboard()
-.init()
-.generateLayout();
+new Keyboard().init().generateLayout();

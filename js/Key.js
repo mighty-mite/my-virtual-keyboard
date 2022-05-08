@@ -1,7 +1,7 @@
 import create from './utils/create.js';
 
 export default class Key {
-  constructor( eng ,  rus ) {
+  constructor(eng, rus) {
     this.eng = eng;
     this.rus = rus;
 
@@ -24,8 +24,8 @@ export default class Key {
     this.engCaps = create('div', ['caps', 'hidden'], this.eCaps);
     this.engShiftCaps = create('div', ['shiftCaps', 'hidden'], this.eShiftCaps);
 
-    this.rusCaseDown = create('div', ['caseDown'], this.rDown)
-    this.rusCaseUp = create('div', ['shift','hidden'], this.rShift)
+    this.rusCaseDown = create('div', ['caseDown'], this.rDown);
+    this.rusCaseUp = create('div', ['shift', 'hidden'], this.rShift);
     this.rusCaps = create('div', ['caps', 'hidden'], this.rCaps);
     this.rusShiftCaps = create('div', ['shiftCaps', 'hidden'], this.rShiftCaps);
 
@@ -33,9 +33,6 @@ export default class Key {
 
     this.rus = create('div', ['rus', 'hidden'], [this.rusCaseDown, this.rusCaseUp, this.rusCaps, this.rusShiftCaps]);
 
-    this.div = create('div', ['key'], [this.eng, this.rus], null, ['code', `${eng.code}`])
-    
-
+    this.div = create('div', ['key'], [this.eng, this.rus], null, ['code', `${eng.code}`]);
   }
-
 }
